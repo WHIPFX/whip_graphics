@@ -180,7 +180,7 @@ RegisterCommand('ledambient', function()
         if ours[GetTimecycleModifierIndex()] then ClearTimecycleModifier() end
     end
     setVisual(enabled)
-    print(('[whippy_led_streetlights] look %s'):format(enabled and 'ON' or 'OFF'))
+    print(('[whip_graphics] look %s'):format(enabled and 'ON' or 'OFF'))
 end, false)
 
 AddEventHandler('onResourceStop', function(name)
