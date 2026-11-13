@@ -1,0 +1,2 @@
+stream_enhanced/ is hand-made, not converted from stream/: its map data is regenerated from Enhanced's own map
+files and it has no hei_kt1_rd_critical_0.ymap. See fxmanifest.lua.
