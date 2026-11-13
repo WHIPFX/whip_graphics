@@ -10,6 +10,10 @@
 --     something just clears it (a camera filter switched off), it's put back within a quarter second. In Halloween weather the
 --     night uses whippy_night_plain (no moonlight colour / exposure change), so the green moon stays.
 -- /ledambient toggles the whole look.
+--
+-- 2.1.0: one pack for both games. This is Legacy's look; client/look_enhanced.lua is Enhanced's. whip's whip_platform
+-- convar says which game (setr whip_platform enhanced in an Enhanced server.cfg; unset is Legacy, as whip_core reads it).
+if string.lower(GetConvar('whip_platform', 'legacy')) == 'enhanced' then return end
 
 local LOOK, DAY, NIGHT, NIGHT_PLAIN = 'whippy_look', 'whippy_day', 'whippy_night', 'whippy_night_plain'
 local TICK_MS = 1000
