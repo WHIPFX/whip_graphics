@@ -5,6 +5,7 @@ lua54 'yes'
 author 'Whippy'
 description 'Whippy graphics pack: LED streetlights, the look (timecycle), lighting fixes (Legacy and GTA V Enhanced)'
 version '2.1.0'
+whip_updates 'WHIPFX/whip_graphics'   -- whip_core checks this repository's releases for a newer version
 
 -- Layout
 --   stream/            game assets for Legacy (streamed automatically; files named after base-game assets replace them)
