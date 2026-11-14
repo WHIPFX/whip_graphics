@@ -137,6 +137,7 @@ end
 local function setVisual(on)
     for name, v in pairs(VISUAL) do
         if on then
+            ---@diagnostic disable-next-line: undefined-global -- a CFX native newer than the natives library
             if visualOrig[name] == nil then visualOrig[name] = GetVisualSettingFloat(name) end
             SetVisualSettingFloat(name, v)
         elseif visualOrig[name] ~= nil then
