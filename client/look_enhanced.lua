@@ -25,6 +25,7 @@ local VISUAL = {
     ['Tonemapping.bright.filmic.A'] = 0.20, ['Tonemapping.bright.filmic.W'] = 5.0,
     ['misc.coronas.intensityScaleGlobal'] = 0.9, ['misc.coronas.sizeScaleGlobal'] = 1.1,
 }
+---@diagnostic disable-next-line: undefined-global -- a CFX native newer than the natives library
 local canVisual = type(SetVisualSettingFloat) == 'function' and type(GetVisualSettingFloat) == 'function'
 
 local weatherByHash = {}
@@ -114,6 +115,7 @@ local function setVisual(on)
     for name, v in pairs(VISUAL) do
         if on then
             if visualOrig[name] == nil then
+                ---@diagnostic disable-next-line: undefined-global -- a CFX native newer than the natives library
                 local ok, cur = pcall(GetVisualSettingFloat, name)
                 if ok then visualOrig[name] = cur end
             end
